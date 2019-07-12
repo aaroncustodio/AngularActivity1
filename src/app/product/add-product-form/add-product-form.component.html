@@ -1,0 +1,41 @@
+<div class='main'>
+    <h2>Add new product form</h2>
+    <div class='add-product-form'>
+        <div class='form-row'>
+            <label>Product Name: </label>
+            <input [(ngModel)]="productName">
+            <br>
+        </div>
+        <div class='form-row'>
+            <label>Product Code: </label>
+            <input [(ngModel)]="productCode">
+            <br>
+        </div>
+        <div class='form-row'>
+            <label>Release Date: </label>
+            <input [(ngModel)]="releaseDate">
+            <br>
+        </div>
+        <div class='form-row'>
+            <label>Description: </label>
+            <input [(ngModel)]="description">
+            <br>
+        </div>
+        <div class='form-row'>
+            <label>Price: </label>
+            <input [(ngModel)]="price">
+            <br>
+        </div>
+        <div class='form-row'>
+            <label>Star Rating: </label>
+            <input [(ngModel)]="starRating">
+            <br>
+        </div>
+        <div class='form-row'>
+            <label>Image URL: </label>
+            <input [(ngModel)]="imageUrl">
+            <br>
+        </div>
+        <button (click)="form_addProduct()">Add Product</button>
+    </div>
+</div>

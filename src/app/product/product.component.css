@@ -1,0 +1,13 @@
+td,th{
+    border: solid;
+    border-width: 1px;
+}
+
+img{
+    width: 50px; 
+    margin: 2px;
+}
+
+table{
+    align-content: center;
+}

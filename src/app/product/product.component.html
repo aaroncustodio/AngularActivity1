@@ -1,0 +1,34 @@
+<h1>Products</h1>
+
+<input [(ngModel)]="searchString">
+
+<button (click)='toggleImage()'>Show/Hide Image</button>
+
+<table *ngIf="products && products.length; else noProducts">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Available</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of findProduct()">
+            <td><img *ngIf="isVisible" [src]='product.imageUrl'></td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productCode}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.releaseDate | date: "MM/dd/yyyy"}}</td>
+            <td>{{product.price | currency: 'USD': 'symbol': '1.3-7'}}</td>
+            <td>{{product.starRating}}</td>
+        </tr>
+    </tbody>
+</table>
+<add-product-form (onAddProduct)='addProduct($event)'></add-product-form>
+<ng-template #noProducts>
+    No product found.
+</ng-template>
